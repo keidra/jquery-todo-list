@@ -1,6 +1,6 @@
 $('#myForm').submit(function(event){
+  var input_value = $('input:text').val();
   if ($('input:text').val() !== '') {
-    var input_value = $('input:text').val();
     $('ol').append('<li>' + input_value + '<a href= "">x</a></li>');
   };
 
