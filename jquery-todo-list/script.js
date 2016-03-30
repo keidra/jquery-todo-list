@@ -3,7 +3,7 @@ $('#myForm').submit(function(event){
 
   $(this).children('input:text').each(function(index, elem) {
     var value = $(elem).val();
-    $('#list').append('<li>' + value + '</li>' + " " + '<a href=""> X </a>');
+    $('#list').append('<li>' + value + '</li>' + " " + '<a href=""> x </a>');
     $(elem).val('');
 
   });
