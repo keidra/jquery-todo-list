@@ -1,6 +1,6 @@
 $('#myForm').submit(function(event){
   var input_value = $('input:text').val();
-  if ($('input:text').val() !== '') {
+  if ($('input:text').val() !== '') {  
     $('ol').append('<li>' + input_value + '<a href= "">x</a></li>');
   };
 
@@ -14,5 +14,12 @@ $('#myForm').submit(function(event){
     $(this).parent().remove();
 });
   
+ $(document).on('click', function(event) {
+    $( "#list" ).sortable({
+      placeholder: "#list"
+    });
+    $( "#list" ).disableSelection();
+  });
+
 
 
