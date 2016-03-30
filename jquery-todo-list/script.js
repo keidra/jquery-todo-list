@@ -1,12 +1,11 @@
 $('#myForm').submit(function(event){
-  event.preventDefault();
+  if ($('input').val() !== '') {
+    var input_value = $('input').val();
+    $('ol').append('<li>' + input_value + '<a href= "">x</a></li>');
+  };
 
-  $(this).children('input:text').each(function(index, elem) {
-    var value = $(elem).val();
-    $('#list').append('<li>' + value + '</li>' + " " + '<a href=""> x </a>');
-    $(elem).val('');
-
-  });
+  $('input').val('');
+  return false
 
   $(document).on('click', 'a', function (event) {
     event.preventDefault();
